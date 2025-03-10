@@ -1,6 +1,6 @@
 let tasks = [];
 
-
+// Function to add a task
 function addTask(name, description) {
   const task = {
     id: tasks.length + 1,
@@ -10,10 +10,12 @@ function addTask(name, description) {
   tasks.push(task);
 }
 
+// Function to view all tasks
 function viewTasks() {
   return tasks;
 }
 
+// Function to update a task
 function updateTask(id, newName, newDescription) {
   const task = tasks.find(t => t.id === id);
   if (task) {
@@ -22,6 +24,7 @@ function updateTask(id, newName, newDescription) {
   }
 }
 
+// Function to delete a task
 function deleteTask(id) {
   tasks = tasks.filter(t => t.id !== id);
 }
